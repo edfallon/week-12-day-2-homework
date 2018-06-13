@@ -5,15 +5,15 @@ const drawMap = function(){
   const zoomLevel = 15;
   const mainMap = new MapWrapper(mapDiv, javaStreet, zoomLevel);
   // mainMap.addMarker(javaStreet);
-  // var button = document.querySelector('button');
-  // button.addEventListener('click', handleButtonClick);
+  var button = document.querySelector('button');
+  button.addEventListener('click', handleButtonClick(mainMap));
 };
 
-// var handleButtonClick = function () {
-//   this.mainMap.panToSomewhere(glasgow)
-//
-// }
+
+var handleButtonClick = function (mainMap) {
+  mainMap.panToSomewhere([41.142937, -8.534538])
 
 
+}
 
 window.addEventListener('load', drawMap);
